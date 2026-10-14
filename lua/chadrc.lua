@@ -8,10 +8,15 @@ local M = {}
 M.base46 = {
 	theme = "onedark",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = {
+		RainbowDelimiterRed = { fg = "#e06c75" },
+		RainbowDelimiterYellow = { fg = "#e5c07b" },
+		RainbowDelimiterBlue = { fg = "#61afef" },
+		RainbowDelimiterOrange = { fg = "#d19a66" },
+		RainbowDelimiterGreen = { fg = "#98c379" },
+		RainbowDelimiterViolet = { fg = "#c678dd" },
+		RainbowDelimiterCyan = { fg = "#56b6c2" },
+	},
 }
 
 -- M.nvdash = { load_on_startup = true }

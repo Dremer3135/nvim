@@ -1,6 +1,14 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+-- Ensure .NET SDK and tools are in Neovim PATH
+vim.env.DOTNET_ROOT = vim.fn.expand "~/.dotnet"
+local dotnet_bin = vim.fn.expand "~/.dotnet"
+local dotnet_tools = vim.fn.expand "~/.dotnet/tools"
+if not vim.env.PATH:find(dotnet_bin, 1, true) then
+  vim.env.PATH = dotnet_bin .. ":" .. dotnet_tools .. ":" .. vim.env.PATH
+end
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
